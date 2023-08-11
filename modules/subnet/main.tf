@@ -1,5 +1,5 @@
 resource "aws_subnet" "pubsubnet1" {
-    vpc_id = aws_vpc.my-vpc2.id
+    vpc_id = var.vpc_id
     cidr_block = var.pubsubnet  
     tags = {
     Name        = "My public subnet"
@@ -12,7 +12,7 @@ resource "aws_subnet" "pubsubnet1" {
 }
 
 resource "aws_subnet" "prvsubnet1" {
-    vpc_id = aws_vpc.my-vpc2.id
+    vpc_id = var.vpc_id
     cidr_block =  var.prvsubnet
     tags = {
     Name        = "My private subnett"

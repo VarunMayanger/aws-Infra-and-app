@@ -1,4 +1,4 @@
-resource "aws_vpc" "my-vpc2" {
+resource "aws_vpc" "my_vpc2" {
   instance_tenancy = "default"
   tags = {
     name = "mynewvpc"
@@ -6,7 +6,6 @@ resource "aws_vpc" "my-vpc2" {
     backup = "24"
     owner = "ICode"
     pacecode = "ABS1234"
-
   }
   cidr_block = var.myvpc
 }

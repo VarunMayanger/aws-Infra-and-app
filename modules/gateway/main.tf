@@ -1,5 +1,5 @@
 resource "aws_internet_gateway" "IG" {
-    vpc_id = aws_vpc.my-vpc2.id
+    vpc_id = var.vpc_id
     
 }
 
@@ -9,5 +9,5 @@ resource "aws_eip" "eip1" {
 
 resource "aws_nat_gateway" "NG" {
     allocation_id = aws_eip.eip1.id
-    subnet_id = aws_subnet.prvsubnet1.id
+    subnet_id = var.pvt_subnet_id
      }

@@ -2,7 +2,7 @@ name: "Infrastructure Creation"
 on:
     push:
       branches:
-        - main
+        - master
   
 jobs:
     Deploy_Dev:
