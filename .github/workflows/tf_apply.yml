@@ -1,38 +1,23 @@
 name: "Apply Tf Plan"
 on:
-    workflow_call:
-        inputs:
-            path:
-                description: 'Specifies the path of the root terraform module.'
-                required: true
-                type: string
-            tf_version:
-                description: 'Specifies version of Terraform to use. e.g: 1.1.0 Default=latest.'
-                required: false
-                type: string
-                default: latest
-            tf_vars_file:
-                description: 'Specifies the Terraform TFVARS file.'
-                required: false
-                type: string
-            region:
-                description: 'Specifies the deployment region for the aws infrastructure'
-                required: true
-                type: string
-            repository:
-                description: 'name of the ecr repository'
-                required: true
-                type: string
-        secrets:
-            cli_config_credentials_token:
-                description: 'cli config credentials token'
-                required: true
-            access_token:
-                description: 'aws access key id'
-                required: true
-            secret_access_token:
-                description: 'aws secret access key'
-                required: true
+  workflow_dispatch:
+    inputs:
+      client:
+        description: 'client name'
+        required: true
+        type: choice
+        options:
+        - 'nike'
+        - 'reebok'
+        default: 'nike'
+      env:
+        description: 'environment'
+        required: true
+        type: choice
+        options:
+        - 'production'
+        - 'stagging'
+        default: 'production'
 
 jobs:
     Apply-plan:
@@ -53,7 +38,7 @@ jobs:
               uses: hashicorp/setup-terraform@v2.0.2
               with:
                 terraform_version: ${{ inputs.tf_version }}
-                cli_config_credentials_token: ${{ secrets.TF_API_TOKEN}}
+                cli_config_credentials_token: ${{ secrets.cli_config_credentials_token }}
                 terraform_wrapper: false
             
             - name: Terraform Init
