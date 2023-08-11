@@ -6,7 +6,7 @@ on:
   
 jobs:
     Deploy_Dev:
-        uses: VarunMayanger/aws-Infra-and-app/.github/workflows/tf_apply.yml@main
+        uses: VarunMayanger/aws-Infra-and-app/.github/workflows/tf_apply.yml@master
         with :
             path: tf_infra
             region: ${{ vars.AWS_REGION}}
