@@ -14,7 +14,7 @@ resource "aws_iam_role" "dev-resources-iam-role" {
   "Effect": "Allow",
   "Action": "iam:CreateUser",
   "Resource": "*"
-}
+}]
 }
 EOF
 }
