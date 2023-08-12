@@ -31,7 +31,7 @@ module "ec2" {
     source = "../../../modules/ec2"
     name =   "dev_ssm_role"
     pub_subnet = module.subnet.pub_subnet_id  
-    iam_instace_profile = module.iam.aws_iam_instance_profile.dev_iam_profile.name
+    iam_instace_profile = module.iam.aws_iam_instance_profile.dev_iam_profile.iam_instance_profile
     grp_ids = module.security_group.allow_tls.grp_ids  
 }
 
@@ -82,4 +82,8 @@ module "subnet"{
     source = "../../../modules/subnet"
     vpc_id =  module.vpc.vpc_id
 
+}
+
+module "security_group"{
+source = "../../../modules/security_group"
 }
