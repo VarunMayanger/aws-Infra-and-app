@@ -89,6 +89,6 @@ source = "../../../modules/security_group"
 vpc_id = module.vpc.aws_vpc.my_vpc2.id
 }
 
-module "iamp"{
+module "iam"{
 source = "../../../modules/iam"
 }
