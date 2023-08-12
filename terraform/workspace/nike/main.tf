@@ -30,9 +30,9 @@ resource "aws_cloudwatch_log_group" "yada" {
 module "ec2" {
     source = "../../../modules/ec2"
     name =   "dev_ssm_role"
-    pub_subnet = module.subnet.pub_subnet.id
+    pub_subnet = module.subnet.pub_subnet_id  
     iam_instace_profile = module.iam.aws_iam_instance_profile.dev_iam_profile.name
-    grp_ids = module.security_group.grp_ids
+    grp_ids = module.security_group.allow_tls.grp_ids  
 }
 
 # ecr module
@@ -48,7 +48,7 @@ module "ecr"{
 module "gateway"{
     source = "../../../modules/gateway"
     vpc_id = module.vpc.vpc_id
-    pvt_subnet_id = module.subnet.pvt_subnet.id
+    pvt_subnet_id = module.subnet.pvt_subnet_id
 }
 
 # RDS
