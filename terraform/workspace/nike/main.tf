@@ -16,6 +16,10 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
+provider "aws"{
+  region = "us-west-2"
+}
+
 resource "aws_cloudwatch_log_group" "yada" {
   name = "Yada"
 
