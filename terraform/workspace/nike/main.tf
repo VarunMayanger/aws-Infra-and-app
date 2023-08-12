@@ -88,6 +88,6 @@ module "security_group"{
 source = "../../../modules/security_group"
 }
 
-module "iamp"{
+module "iam"{
 source = "../../../modules/iam"
 }
