@@ -9,7 +9,7 @@ jobs:
         uses: VarunMayanger/aws-Infra-and-app/.github/workflows/tf_apply.yml@master
         with :
             path: terraform/workspace/nike
-            region: ${{ vars.AWS_REGION}}
+            region: ${{ secrets.AWS_REGION}}
             repository: pythonapp
             
         secrets:
