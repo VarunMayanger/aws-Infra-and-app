@@ -12,9 +12,9 @@ variable "vpc_id"{
 }
 
 variable "ng_id" {
-  value = string
+  type = string
 }
 
 variable "ig_id" {
-  value = string
+  type= string
 }
