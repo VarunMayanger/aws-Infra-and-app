@@ -77,15 +77,15 @@ jobs:
               id: apply-run
               run: terraform apply -auto-approve
             
-            - name: Outputs
-              id: outcomes
-              run: |
-                echo "test=$(terraform output -raw instance_id)" >> $GITHUB_OUTPUT
+            # - name: Outputs
+            #   id: outcomes
+            #   run: |
+            #     echo "test=$(terraform output -raw instance_id)" >> $GITHUB_OUTPUT
                 
 
-            - name: print aws instance id
-              run : |
-                  echo "${{steps.outcomes.outputs.test}}" 
+            # - name: print aws instance id
+            #   run : |
+            #       
 
     Build:
         runs-on: ubuntu-latest
