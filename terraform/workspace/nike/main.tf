@@ -86,6 +86,7 @@ module "subnet"{
 
 module "security_group"{
 source = "../../../modules/security_group"
+vpc_id = module.vpc.aws_vpc.my_vpc2.id
 }
 
 module "iamp"{
