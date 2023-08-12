@@ -1,3 +1,3 @@
 output "ecr_repo_name" {
-    value = aws_ecr_repository.foo.name
+    value = aws_ecr_repository.mrmayanger.name
 }
