@@ -30,6 +30,9 @@ resource "aws_cloudwatch_log_group" "yada" {
 module "ec2" {
     source = "../../../modules/ec2"
     name =   "dev_ssm_role"
+    pub_subnet = module.subnet.pub_subnet.id
+    iam_instace_profile = module.iam.aws_iam_instance_profile.dev_iam_profile.name
+    grp_ids = module.security_group.grp_ids
 }
 
 # ecr module

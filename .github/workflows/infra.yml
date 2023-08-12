@@ -8,7 +8,7 @@ jobs:
     Deploy_Dev:
         uses: VarunMayanger/aws-Infra-and-app/.github/workflows/tf_apply.yml@master
         with :
-            path: tf_infra
+            path: terraform/workspace/nike
             region: ${{ vars.AWS_REGION}}
             repository: pythonapp
             

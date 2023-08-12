@@ -1,4 +1,4 @@
-resource "aws_ecr_repository" "foo" {
+resource "aws_ecr_repository" "mrmayanger" {
   name                 = var.app_name
   image_tag_mutability = var.image_mutablity
 
