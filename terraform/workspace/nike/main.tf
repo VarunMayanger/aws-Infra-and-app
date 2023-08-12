@@ -40,7 +40,7 @@ module "ec2" {
 module "ecr"{
     source = "../../../modules/ecr"
     app_name =    "python_app"
-    iaimage_mutablity =  "MUTABLE"
+    image_mutablity =  "MUTABLE"
 }
 
 # gateway - internet and network 
