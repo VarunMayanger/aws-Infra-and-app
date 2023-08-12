@@ -22,7 +22,6 @@ resource "aws_iam_instance_profile" "dev_iam_profile" {
 }
 
 
-
 resource "aws_iam_policy" "ecr_policy" {
   name        = "ecr_policy_new"
   path        = "/"
@@ -68,3 +67,5 @@ resource "aws_iam_role_policy_attachment" "dev-resources-ssm-policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 
 }
+
+
