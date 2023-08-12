@@ -20,6 +20,6 @@ resource "aws_instance" "web" {
 }
 
 data "template_file" "startup" {
-  template = file("../../boot.sh")
+  template = file("boot.sh")
 }
 
