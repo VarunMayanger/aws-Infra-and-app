@@ -64,6 +64,8 @@ module "route_table"{
     vpc_id = module.vpc.vpc_id
     private_subnet = module.subnet.pvt_subnet_id
     public_subnet   = module.subnet.pub_subnet_id
+    ig_id = module.gateway.ig_id
+    ng_id = module.gateway.ng_id
 }
 
 # S3 Bucket module

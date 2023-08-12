@@ -10,3 +10,11 @@ variable "private_subnet" {
 variable "vpc_id"{
     type = string
 }
+
+variable "ng_id" {
+  value = string
+}
+
+variable "ig_id" {
+  value = string
+}

@@ -2,7 +2,7 @@ resource "aws_route_table" "RT1" {
     vpc_id = var.vpc_id
 
     route{
-        gateway_id = aws_internet_gateway.IG.id
+        gateway_id = var.ig_id
         cidr_block = "0.0.0.0/0" 
     }
 }
@@ -15,7 +15,7 @@ resource "aws_route_table" "RT2" {
     vpc_id = var.vpc_id
 
     route{
-        gateway_id = aws_nat_gateway.NG.id
+        gateway_id = var.ng_id
         cidr_block = "0.0.0.0/0" 
     }
 }
