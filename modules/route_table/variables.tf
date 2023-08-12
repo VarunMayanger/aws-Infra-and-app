@@ -8,5 +8,5 @@ variable "private_subnet" {
 
 
 variable "vpc_id"{
-    types = string
+    type = string
 }
