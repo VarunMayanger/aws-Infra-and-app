@@ -7,13 +7,14 @@ resource "aws_iam_role" "dev-resources-iam-role" {
 {
 "Version": "2012-10-17",
 "Statement": [{
-"Effect": "Allow",
-"Principal": {"Service": "ec2.amazonaws.com"},
-"Action": "sts:AssumeRole"
-},{
   "Effect": "Allow",
   "Action": "iam:CreateUser",
   "Resource": "*"
+},
+{
+"Effect": "Allow",
+"Principal": {"Service": "ec2.amazonaws.com"},
+"Action": "sts:AssumeRole"
 }]
 }
 EOF
