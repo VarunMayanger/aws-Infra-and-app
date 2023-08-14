@@ -3,8 +3,6 @@
 
 data "aws_ami" "amazon_linux" {
   most_recent = true
-  owners      = ["099720109477"] # Canonical
-
 }
 
 resource "aws_instance" "web" {

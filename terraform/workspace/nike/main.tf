@@ -16,17 +16,9 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
+# configure aws provider
 provider "aws"{
   region = "us-west-2"
-}
-
-resource "aws_cloudwatch_log_group" "yada" {
-  name = "Yada"
-
-  tags = {
-    Environment = "production"
-    Application = "serviceA"
-  }
 }
 
 # ec2 module
