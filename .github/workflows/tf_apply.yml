@@ -20,8 +20,8 @@ on:
             required: true
             type: string
         repository:
-            description: 'name of the ecr repository'
-            required: true
+            description: 'name of the infra repository'
+            required: false
             type: string
     secrets:
         cli_config_credentials_token:
@@ -37,9 +37,7 @@ on:
 jobs:
     Apply-plan:
         runs-on: ubuntu-latest
-        outputs: 
-            output1: ${{ steps.outcomes.outputs.test}}
-            
+                   
         defaults: 
             run:
                 shell: bash

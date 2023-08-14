@@ -10,7 +10,7 @@ jobs:
         with :
             path: terraform/workspace/nike
             region: ${{ vars.AWS_REGION}}
-            repository: pythonapp
+            repository: aws_infra
             
         secrets:
             cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
