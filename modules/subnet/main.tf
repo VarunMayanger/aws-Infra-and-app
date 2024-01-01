@@ -7,7 +7,7 @@ resource "aws_subnet" "pubsubnet1" {
     purpose = "UI"
     Owner = " LL"
     Backup = "7"
-    pacecode = "ABS1234"
+    casecode = "ABS1234"
   }
 }
 
@@ -20,6 +20,6 @@ resource "aws_subnet" "prvsubnet1" {
     purpose = "UI"
     Owner = " LL"
     Backup = "7"
-    pacecode = "ABS1234"
+    casecode = "ABS1234"
   }
     }
