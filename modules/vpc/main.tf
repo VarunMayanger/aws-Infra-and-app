@@ -5,7 +5,7 @@ resource "aws_vpc" "my_vpc2" {
     environment = "Dev"
     backup = "24"
     owner = "ICode"
-    pacecode = "ABS1234"
+    casecode = "ABS1234"
   }
   cidr_block = var.myvpc
 }
